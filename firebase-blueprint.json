@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "AssessmentSession": {
+      "title": "AssessmentSession",
+      "description": "Stores the complete accreditation assessment state and records for simak-lamptip",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "User ID who owns this session"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last update"
+        },
+        "studyPrograms": {
+          "type": "object",
+          "description": "Study program info map"
+        },
+        "allAssessments": {
+          "type": "object",
+          "description": "All assessment indicator records"
+        },
+        "globalVariables": {
+          "type": "object",
+          "description": "Global quantitative variables"
+        },
+        "evidenceLists": {
+          "type": "object",
+          "description": "Evidence links list"
+        }
+      },
+      "required": ["userId", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/assessment_sessions/{sessionId}": {
+      "schema": {
+        "$ref": "#/entities/AssessmentSession"
+      },
+      "description": "Assessment sessions stored by user or session ID"
+    }
+  }
+}

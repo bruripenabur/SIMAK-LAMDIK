@@ -1,0 +1,8 @@
+{
+  "name": "simak-lamdik",
+  "description": "Platform Kertas Kerja Asesmen Lapangan (AL) untuk LAM-DIK dengan dynamic scoring, live evidence extractor, anti-bias rubrics, dan syarat unggul evaluator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

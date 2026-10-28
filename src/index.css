@@ -1,0 +1,124 @@
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0b1120;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Mobile & Tablet Responsive Enhancements */
+@media (max-width: 768px) {
+  .app-header-container {
+    padding: 10px 12px !important;
+  }
+
+  .ant-segmented {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  .ant-table-wrapper {
+    overflow-x: auto !important;
+  }
+
+  .ant-card {
+    border-radius: 8px !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-flex-col {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app-header-container {
+    padding: 12px 16px !important;
+  }
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+
+  /* Hide app navigation, header, sidebar, buttons, and dark containers when printing */
+  .ant-layout-header,
+  .ant-layout-footer,
+  .ant-segmented,
+  .ant-btn,
+  .ant-tabs-nav,
+  .ant-modal-close,
+  .ant-modal-footer,
+  .ant-message,
+  .ant-notification {
+    display: none !important;
+  }
+
+  /* Isolate printable document container */
+  #printable-pasca-al-document,
+  #printable-ba-view-content,
+  #printable-evidence-report-modal {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .ant-modal-mask {
+    display: none !important;
+  }
+
+  .ant-modal-wrap {
+    position: static !important;
+    overflow: visible !important;
+  }
+
+  .ant-modal {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+  }
+
+  .ant-modal-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+}
+
+/* Yellow input cells text color override to black */
+.yellow-input-number .ant-input-number-input,
+.yellow-input-number input,
+.ant-input-number[style*="background-color: rgb(254, 240, 138)"] input,
+.ant-input-number[style*="background-color: #fef08a"] input {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
